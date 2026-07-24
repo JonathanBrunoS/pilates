@@ -94,8 +94,11 @@
         }
         .logo img {
             max-height: 60px;
-            width: auto;
+            width: 60px; /* Definindo largura e altura iguais para um círculo perfeito */
             display: block;
+            border-radius: 50%; /* Transforma o quadrado em círculo */
+            object-fit: cover;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra leve para destacar */
         }
         .nav-links {
             display: flex;
@@ -205,10 +208,20 @@
         .info-item i { font-size: 2rem; color: var(--secondary-blue); }
         .info-item h3 { color: var(--white); margin-bottom: 5px; }
         .info-item p { color: #d1e8f5; margin: 0; }
-        .map-placeholder {
-            background-color: #ddd; width: 100%; height: 350px; border-radius: 15px;
-            display: flex; align-items: center; justify-content: center;
-            color: var(--text-light); font-weight: 600;
+        
+        /* Container do Mapa */
+        .map-wrapper {
+            width: 100%;
+            height: 350px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            background-color: #fff;
+        }
+        .map-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
         }
 
         footer { background-color: #06233b; color: var(--white); text-align: center; padding: 20px; }
@@ -402,9 +415,9 @@
                 </a>
             </div>
             
-            <!-- Substituir por iframe real do Google Maps -->
-            <div class="map-placeholder">
-                [Área reservada para o mapa do Google (iframe)]
+            <!-- Mapa do Google Incorporado -->
+            <div class="map-wrapper">
+                <iframe src="https://maps.google.com/maps?q=Rua%20E%C3%A7a%20de%20Queiroz,%20682%20-%20Vila%20Mariana,%20S%C3%A3o%20Paulo%20-%20SP&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </section>
