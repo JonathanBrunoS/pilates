@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boa Vida Pilates e Fisioterapia | Vila Mariana</title>
     <meta name="description" content="Te ajudamos a ter uma vida com mais saúde e sem dores! Pilates, Fisioterapia e Terapias Manuais na Vila Mariana.">
+    <!-- Fontes e Ícones -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Swiper CSS (Para o Carrossel) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <style>
         :root {
-            --primary-blue: #0b3b60; /* Baseado no folheto */
+            --primary-blue: #0b3b60;
             --secondary-blue: #4fa1d8;
             --light-blue: #e8f4fa;
             --text-dark: #333333;
@@ -32,22 +35,9 @@
             line-height: 1.6;
         }
 
-        /* Tipografia */
-        h1, h2, h3 {
-            color: var(--primary-blue);
-            margin-bottom: 15px;
-        }
-
-        h2 {
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        p {
-            color: var(--text-light);
-            margin-bottom: 15px;
-        }
+        h1, h2, h3 { color: var(--primary-blue); margin-bottom: 15px; }
+        h2 { font-size: 2.5rem; text-align: center; margin-bottom: 40px; }
+        p { color: var(--text-light); margin-bottom: 15px; }
 
         /* Botões */
         .btn {
@@ -61,18 +51,15 @@
             cursor: pointer;
             border: none;
         }
-
         .btn-primary {
             background-color: var(--primary-blue);
             color: var(--white);
             box-shadow: 0 4px 15px rgba(11, 59, 96, 0.2);
         }
-
         .btn-primary:hover {
             background-color: var(--secondary-blue);
             transform: translateY(-2px);
         }
-
         .btn-whatsapp {
             background-color: var(--whatsapp-green);
             color: var(--white);
@@ -83,7 +70,6 @@
             gap: 10px;
             box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
         }
-
         .btn-whatsapp:hover {
             background-color: #1ebe57;
             transform: translateY(-2px);
@@ -98,266 +84,152 @@
             top: 0;
             z-index: 1000;
         }
-
         .nav-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 15px 20px;
+            padding: 10px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-
-        .logo-placeholder {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-blue);
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        .logo img {
+            max-height: 60px;
+            width: auto;
+            display: block;
         }
-        
-        .logo-placeholder i {
-            color: var(--secondary-blue);
-        }
-
         .nav-links {
             display: flex;
             gap: 25px;
             list-style: none;
+            align-items: center;
         }
-
         .nav-links a {
             text-decoration: none;
             color: var(--text-dark);
             font-weight: 600;
             transition: color 0.3s ease;
         }
-
-        .nav-links a:hover {
-            color: var(--secondary-blue);
-        }
+        .nav-links a:hover { color: var(--secondary-blue); }
 
         /* Hero Section */
         .hero {
-            padding: 150px 20px 100px;
+            padding: 160px 20px 100px;
             background: linear-gradient(135deg, var(--light-blue) 0%, var(--white) 100%);
             text-align: center;
         }
-
-        .hero-container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            line-height: 1.2;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 40px;
-        }
+        .hero-container { max-width: 900px; margin: 0 auto; }
+        .hero h1 { font-size: 3rem; line-height: 1.2; margin-bottom: 20px; }
+        .hero p { font-size: 1.2rem; margin-bottom: 40px; }
 
         /* Features / Nosso Espaço */
-        .features {
-            padding: 80px 20px;
-            background-color: var(--white);
-        }
-
+        .features { padding: 80px 20px; background-color: var(--white); }
         .features-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            max-width: 1200px; margin: 0 auto;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;
         }
-
         .feature-card {
-            background: var(--white);
-            padding: 40px 30px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
-            border-bottom: 4px solid var(--secondary-blue);
+            background: var(--white); padding: 40px 30px; border-radius: 15px;
+            text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease; border-bottom: 4px solid var(--secondary-blue);
         }
+        .feature-card:hover { transform: translateY(-10px); }
+        .feature-card i { font-size: 3rem; color: var(--secondary-blue); margin-bottom: 20px; }
 
-        .feature-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .feature-card i {
-            font-size: 3rem;
-            color: var(--secondary-blue);
-            margin-bottom: 20px;
-        }
-
-        /* Serviços */
-        .services {
+        /* Galeria / Carrossel */
+        .gallery {
             padding: 80px 20px;
             background-color: var(--light-blue);
         }
-
-        .services-container {
+        .gallery-container {
             max-width: 1200px;
             margin: 0 auto;
         }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+        .swiper {
+            width: 100%;
+            padding-bottom: 50px;
         }
-
-        .service-item {
-            background: var(--white);
-            padding: 20px;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
-        }
-
-        .service-item i {
-            color: var(--primary-blue);
-            font-size: 1.5rem;
-        }
-
-        .service-item span {
-            font-weight: 600;
-            color: var(--text-dark);
-        }
-
-        /* Convênios */
-        .convenios {
-            padding: 60px 20px;
-            background-color: var(--white);
+        .swiper-slide {
             text-align: center;
-        }
-
-        .convenios-list {
             display: flex;
             justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-            max-width: 800px;
-            margin: 0 auto;
+            align-items: center;
+        }
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .swiper-pagination-bullet-active {
+            background: var(--primary-blue) !important;
+        }
+        .swiper-button-next, .swiper-button-prev {
+            color: var(--primary-blue) !important;
         }
 
+        /* Serviços */
+        .services { padding: 80px 20px; background-color: var(--white); }
+        .services-container { max-width: 1200px; margin: 0 auto; }
+        .services-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;
+        }
+        .service-item {
+            background: var(--light-blue); padding: 20px; border-radius: 10px;
+            display: flex; align-items: center; gap: 15px;
+        }
+        .service-item i { color: var(--primary-blue); font-size: 1.5rem; }
+        .service-item span { font-weight: 600; color: var(--text-dark); }
+
+        /* Convênios */
+        .convenios { padding: 60px 20px; background-color: var(--light-blue); text-align: center; }
+        .convenios-list {
+            display: flex; justify-content: center; flex-wrap: wrap; gap: 15px;
+            max-width: 800px; margin: 0 auto;
+        }
         .convenio-tag {
-            background-color: var(--primary-blue);
-            color: var(--white);
-            padding: 10px 25px;
-            border-radius: 20px;
-            font-weight: 600;
-            font-size: 1.1rem;
+            background-color: var(--primary-blue); color: var(--white);
+            padding: 10px 25px; border-radius: 20px; font-weight: 600; font-size: 1.1rem;
         }
 
         /* Contato */
-        .contact {
-            padding: 80px 20px;
-            background-color: var(--primary-blue);
-            color: var(--white);
-        }
-
-        .contact h2 {
-            color: var(--white);
-        }
-
+        .contact { padding: 80px 20px; background-color: var(--primary-blue); color: var(--white); }
+        .contact h2 { color: var(--white); }
         .contact-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
+            max-width: 1200px; margin: 0 auto;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 50px;
         }
-
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-        }
-
-        .info-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 20px;
-        }
-
-        .info-item i {
-            font-size: 2rem;
-            color: var(--secondary-blue);
-        }
-
-        .info-item h3 {
-            color: var(--white);
-            margin-bottom: 5px;
-        }
-
-        .info-item p {
-            color: #d1e8f5;
-            margin: 0;
-        }
-
+        .contact-info { display: flex; flex-direction: column; gap: 30px; }
+        .info-item { display: flex; align-items: flex-start; gap: 20px; }
+        .info-item i { font-size: 2rem; color: var(--secondary-blue); }
+        .info-item h3 { color: var(--white); margin-bottom: 5px; }
+        .info-item p { color: #d1e8f5; margin: 0; }
         .map-placeholder {
-            background-color: #ddd;
-            width: 100%;
-            height: 350px;
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-light);
-            font-weight: 600;
+            background-color: #ddd; width: 100%; height: 350px; border-radius: 15px;
+            display: flex; align-items: center; justify-content: center;
+            color: var(--text-light); font-weight: 600;
         }
 
-        /* Footer */
-        footer {
-            background-color: #06233b;
-            color: var(--white);
-            text-align: center;
-            padding: 20px;
-        }
+        footer { background-color: #06233b; color: var(--white); text-align: center; padding: 20px; }
 
         /* FAB WhatsApp */
         .fab-whatsapp {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background-color: var(--whatsapp-green);
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-            z-index: 1000;
-            text-decoration: none;
-            transition: transform 0.3s ease;
+            position: fixed; bottom: 30px; right: 30px;
+            background-color: var(--whatsapp-green); color: white;
+            width: 60px; height: 60px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; font-size: 2rem;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); z-index: 1000;
+            text-decoration: none; transition: transform 0.3s ease;
         }
-
-        .fab-whatsapp:hover {
-            transform: scale(1.1);
-        }
+        .fab-whatsapp:hover { transform: scale(1.1); }
 
         /* Responsividade */
         @media (max-width: 768px) {
-            .nav-links {
-                display: none; /* Em um projeto real, adicionar menu hamburger */
-            }
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-            .contact-container {
-                grid-template-columns: 1fr;
-            }
+            .nav-links { display: none; }
+            .hero h1 { font-size: 2.2rem; }
+            .contact-container { grid-template-columns: 1fr; }
+            .swiper-slide img { height: 300px; }
         }
     </style>
 </head>
@@ -366,13 +238,13 @@
     <!-- Header -->
     <header>
         <div class="nav-container">
-            <div class="logo-placeholder">
-                <i class="fa-solid fa-child-reaching"></i>
-                Boa Vida Pilates
-            </div>
+            <a href="#" class="logo">
+                <img src="https://i.ibb.co/qMDjvtHy/image.png" alt="Logo Boa Vida Pilates">
+            </a>
             <ul class="nav-links">
                 <li><a href="#inicio">Início</a></li>
                 <li><a href="#espaco">O Espaço</a></li>
+                <li><a href="#galeria">Nossas Aulas</a></li>
                 <li><a href="#servicos">Serviços</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
@@ -409,6 +281,44 @@
                 <i class="fa-solid fa-house-chimney-window"></i>
                 <h3>Ambiente Confortável</h3>
                 <p>Um espaço acolhedor e climatizado na Vila Mariana, pensado para o seu bem-estar físico e mental.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria (Carrossel Swiper) -->
+    <section id="galeria" class="gallery">
+        <div class="gallery-container">
+            <h2>Nossas Aulas na Prática</h2>
+            <p style="text-align: center; margin-bottom: 30px;">Veja um pouco do nosso dia a dia e dos nossos alunos evoluindo.</p>
+            
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <!-- Slides com as imagens enviadas -->
+                    <div class="swiper-slide">
+                        <img src="https://i.ibb.co/hxgxtw6s/image.png" alt="Aluno Boa Vida Pilates 1">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://i.ibb.co/KxbhQ2ys/image.png" alt="Aluno Boa Vida Pilates 2">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://i.ibb.co/ZqwyYv2/image.png" alt="Aluno Boa Vida Pilates 3">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://i.ibb.co/JjRX992z/image.png" alt="Aluno Boa Vida Pilates 4">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://i.ibb.co/cSb823zY/image.png" alt="Aluno Boa Vida Pilates 5">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://i.ibb.co/J4x8qnK/image.png" alt="Aluno Boa Vida Pilates 6">
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Navigation -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
         </div>
     </section>
@@ -508,5 +418,38 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
+    <!-- Swiper JS (Script do Carrossel) -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                // Quando a tela for >= 768px (Tablets)
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                },
+                // Quando a tela for >= 1024px (Desktops)
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+            },
+        });
+    </script>
 </body>
 </html>
