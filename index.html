@@ -3,211 +3,510 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estratégia Hits do iFood | Rocket For Eat</title>
-    
-    <!-- Meta Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1685896815966860');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1685896815966860&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
-
+    <title>Boa Vida Pilates e Fisioterapia | Vila Mariana</title>
+    <meta name="description" content="Te ajudamos a ter uma vida com mais saúde e sem dores! Pilates, Fisioterapia e Terapias Manuais na Vila Mariana.">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* =======================================================
-           IDENTIDADE VISUAL E VARIÁVEIS DE ALTA CONVERSÃO
-           ======================================================= */
         :root {
-            --rocket-yellow: #FFCA08; 
-            --rocket-yellow-hover: #e0b000;
-            --bg-light: #F8FAFC;
-            --bg-white: #FFFFFF;
-            --text-dark: #0F172A;
-            --text-gray: #475569;
-            --border-light: #E2E8F0;
+            --primary-blue: #0b3b60; /* Baseado no folheto */
+            --secondary-blue: #4fa1d8;
+            --light-blue: #e8f4fa;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --white: #ffffff;
+            --whatsapp-green: #25D366;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', -apple-system, sans-serif; }
-
-        body { background-color: var(--bg-light); color: var(--text-dark); line-height: 1.6; overflow-x: hidden; }
-
-        .container { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
-        section { padding: 80px 0; }
-
-        h1, h2, h3 { line-height: 1.2; font-weight: 900; color: var(--text-dark); letter-spacing: -0.5px; }
-        
-        .highlight { background-color: var(--rocket-yellow); padding: 0 8px; border-radius: 4px; display: inline-block; color: #000; }
-
-        /* HEADER */
-        header { background-color: var(--bg-white); padding: 15px 0; border-bottom: 1px solid var(--border-light); text-align: center; }
-        .logo-img { max-width: 140px; height: auto; }
-
-        /* HERO SECTION */
-        .hero { text-align: center; padding: 60px 0; background-color: var(--bg-white); }
-        .pre-headline { color: #DC2626; font-weight: 800; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 20px; }
-        .hero h1 { font-size: 2.8rem; margin-bottom: 24px; max-width: 800px; margin-left: auto; margin-right: auto; }
-        .hero p { font-size: 1.2rem; color: var(--text-gray); max-width: 650px; margin: 0 auto 35px; }
-        
-        /* BOTÕES DE COMPRA */
-        .cta-button {
-            display: inline-flex; justify-content: center; align-items: center; text-align: center;
-            background-color: var(--rocket-yellow); color: #000;
-            padding: 22px 35px; font-size: 1.2rem; font-weight: 900; text-decoration: none;
-            border-radius: 8px; text-transform: uppercase; border: none; cursor: pointer;
-            box-shadow: 0 10px 20px -5px rgba(255, 202, 8, 0.4);
-            transition: all 0.2s ease; width: 100%; max-width: 450px;
-            animation: pulse-button 2s infinite;
-        }
-        .cta-button:hover { transform: translateY(-3px); background-color: var(--rocket-yellow-hover); }
-        
-        @keyframes pulse-button {
-            0% { box-shadow: 0 0 0 0 rgba(255, 202, 8, 0.5); }
-            70% { box-shadow: 0 0 0 15px rgba(255, 202, 8, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(255, 202, 8, 0); }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
         }
 
-        .price-tag { margin-top: 15px; font-size: 0.95rem; color: var(--text-gray); font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 5px; }
+        body {
+            color: var(--text-dark);
+            background-color: var(--white);
+            line-height: 1.6;
+        }
 
-        /* SEÇÃO: POR QUE ENTRAR NO HITS? */
-        .why-section { background-color: var(--text-dark); color: var(--bg-white); text-align: center; }
-        .why-section h2 { color: var(--bg-white); margin-bottom: 40px; }
-        .benefits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
-        .benefit-card { padding: 30px; background: rgba(255,255,255,0.05); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); }
-        .benefit-card h3 { color: var(--rocket-yellow); font-size: 1.3rem; margin-bottom: 15px; }
-        .benefit-card p { color: #CBD5E1; font-size: 1rem; }
+        /* Tipografia */
+        h1, h2, h3 {
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+        }
 
-        /* GRID CONTEÚDO (MOCKUP + LISTA) */
-        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px; align-items: center; }
-        .check-list { list-style: none; }
-        .check-list li { margin-bottom: 20px; padding-left: 35px; position: relative; color: var(--text-dark); font-size: 1.1rem; font-weight: 500; }
-        .check-list li::before { content: '✓'; color: #16A34A; position: absolute; left: 0; font-weight: 900; font-size: 1.4rem; top: -3px; }
-        .mockup-img { max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15); }
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 40px;
+        }
 
-        /* FAQ - PERGUNTAS FREQUENTES */
-        .faq-section { background-color: var(--bg-white); }
-        .faq-container { max-width: 700px; margin: 0 auto; }
-        .faq-item { background: var(--bg-light); border: 1px solid var(--border-light); padding: 25px; margin-bottom: 15px; border-radius: 8px; }
-        .faq-item h4 { font-size: 1.1rem; margin-bottom: 10px; color: var(--text-dark); }
-        .faq-item p { color: var(--text-gray); font-size: 1rem; }
+        p {
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
 
-        /* MOBILE OPTIMIZATION */
+        /* Botões */
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(11, 59, 96, 0.2);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary-blue);
+            transform: translateY(-2px);
+        }
+
+        .btn-whatsapp {
+            background-color: var(--whatsapp-green);
+            color: var(--white);
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #1ebe57;
+            transform: translateY(-2px);
+        }
+
+        /* Header / Navbar */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-placeholder {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo-placeholder i {
+            color: var(--secondary-blue);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-blue);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 150px 20px 100px;
+            background: linear-gradient(135deg, var(--light-blue) 0%, var(--white) 100%);
+            text-align: center;
+        }
+
+        .hero-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+
+        /* Features / Nosso Espaço */
+        .features {
+            padding: 80px 20px;
+            background-color: var(--white);
+        }
+
+        .features-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            border-bottom: 4px solid var(--secondary-blue);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-card i {
+            font-size: 3rem;
+            color: var(--secondary-blue);
+            margin-bottom: 20px;
+        }
+
+        /* Serviços */
+        .services {
+            padding: 80px 20px;
+            background-color: var(--light-blue);
+        }
+
+        .services-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .service-item {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        }
+
+        .service-item i {
+            color: var(--primary-blue);
+            font-size: 1.5rem;
+        }
+
+        .service-item span {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        /* Convênios */
+        .convenios {
+            padding: 60px 20px;
+            background-color: var(--white);
+            text-align: center;
+        }
+
+        .convenios-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .convenio-tag {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 10px 25px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        /* Contato */
+        .contact {
+            padding: 80px 20px;
+            background-color: var(--primary-blue);
+            color: var(--white);
+        }
+
+        .contact h2 {
+            color: var(--white);
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .info-item i {
+            font-size: 2rem;
+            color: var(--secondary-blue);
+        }
+
+        .info-item h3 {
+            color: var(--white);
+            margin-bottom: 5px;
+        }
+
+        .info-item p {
+            color: #d1e8f5;
+            margin: 0;
+        }
+
+        .map-placeholder {
+            background-color: #ddd;
+            width: 100%;
+            height: 350px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #06233b;
+            color: var(--white);
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* FAB WhatsApp */
+        .fab-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--whatsapp-green);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .fab-whatsapp:hover {
+            transform: scale(1.1);
+        }
+
+        /* Responsividade */
         @media (max-width: 768px) {
-            section { padding: 50px 0; }
-            .hero h1 { font-size: 2rem; }
-            .benefits-grid { grid-template-columns: 1fr; gap: 20px; }
-            .grid-2 { grid-template-columns: 1fr; gap: 30px; }
-            .cta-button { font-size: 1rem; padding: 20px; }
+            .nav-links {
+                display: none; /* Em um projeto real, adicionar menu hamburger */
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- HEADER -->
+    <!-- Header -->
     <header>
-        <div class="container">
-            <img src="https://i.ibb.co/JFtR6PRv/Logo-Oficial.png" alt="Rocket For Eat" class="logo-img">
+        <div class="nav-container">
+            <div class="logo-placeholder">
+                <i class="fa-solid fa-child-reaching"></i>
+                Boa Vida Pilates
+            </div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#espaco">O Espaço</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <a href="https://wa.me/5511975435555?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20as%20aulas%20de%20Pilates%21" class="btn btn-primary" target="_blank">Agendar Aula</a>
         </div>
     </header>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="container">
-            <div class="pre-headline">Documento Estratégico para Donos de Delivery</div>
-            <h1>O Segredo Matemático para Dominar o Hits do iFood <span class="highlight">Sem Queimar seu Lucro.</span></h1>
-            <p>O método exato para ajustar os centavos do seu cardápio, configurar os limites das campanhas e fazer o iFood subsidiar a sua entrega todos os dias.</p>
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-container">
+            <h1>Te ajudamos a ter uma vida com mais saúde e sem dores!</h1>
+            <p>Cuidando da sua saúde com atenção e qualidade. Especialistas em Pilates, Fisioterapia e Terapias Manuais na Vila Mariana.</p>
+            <a href="https://wa.me/5511975435555?text=Ol%C3%A1%2C%20quero%20agendar%20minha%20aula%20experimental%21" class="btn btn-whatsapp" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> Agende já sua Aula Experimental!
+            </a>
+        </div>
+    </section>
+
+    <!-- Nosso Espaço (Features) -->
+    <section id="espaco" class="features">
+        <h2>Nosso Espaço Tem</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fa-solid fa-dumbbell"></i>
+                <h3>Equipamentos Modernos</h3>
+                <p>Estrutura completa com aparelhos de última geração para garantir a melhor execução dos movimentos.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fa-solid fa-user-user"></i>
+                <h3>Atendimento Personalizado</h3>
+                <p>Aulas focadas nas suas necessidades específicas, seja para reabilitação, fortalecimento ou flexibilidade.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fa-solid fa-house-chimney-window"></i>
+                <h3>Ambiente Confortável</h3>
+                <p>Um espaço acolhedor e climatizado na Vila Mariana, pensado para o seu bem-estar físico e mental.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nossos Serviços -->
+    <section id="servicos" class="services">
+        <div class="services-container">
+            <h2>Nossos Serviços</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <i class="fa-solid fa-check-circle"></i>
+                    <span>Pilates e Fisioterapia</span>
+                </div>
+                <div class="service-item">
+                    <i class="fa-solid fa-check-circle"></i>
+                    <span>Massagem Esportiva e Relaxante</span>
+                </div>
+                <div class="service-item">
+                    <i class="fa-solid fa-check-circle"></i>
+                    <span>Liberação Miofascial</span>
+                </div>
+                <div class="service-item">
+                    <i class="fa-solid fa-check-circle"></i>
+                    <span>Quiropraxia e RPG</span>
+                </div>
+                <div class="service-item">
+                    <i class="fa-solid fa-check-circle"></i>
+                    <span>Acupuntura e Ventosaterapia</span>
+                </div>
+                <div class="service-item">
+                    <i class="fa-solid fa-check-circle"></i>
+                    <span>Drenagem Linfática c/ Taping</span>
+                </div>
+                <div class="service-item">
+                    <i class="fa-solid fa-check-circle"></i>
+                    <span>Aplicação de Enzimas Redutoras</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Convênios -->
+    <section class="convenios">
+        <h2>Convênios Aceitos</h2>
+        <div class="convenios-list">
+            <div class="convenio-tag">Wellhub (Gympass)</div>
+            <div class="convenio-tag">Classpass</div>
+            <div class="convenio-tag">Totalpass</div>
+            <div class="convenio-tag">Gurupass</div>
+        </div>
+    </section>
+
+    <!-- Contato e Localização -->
+    <section id="contato" class="contact">
+        <h2>Venha nos Visitar</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <h3>Endereço</h3>
+                        <p>Rua Eça de Queiroz, 682<br>Vila Mariana, São Paulo - SP</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <div>
+                        <h3>WhatsApp</h3>
+                        <p>(11) 97543-5555</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fa-brands fa-instagram"></i>
+                    <div>
+                        <h3>Instagram</h3>
+                        <p>@boavidapilates</p>
+                    </div>
+                </div>
+                <a href="https://wa.me/5511975435555" class="btn btn-whatsapp" style="margin-top: 20px; display: inline-flex; width: fit-content;" target="_blank">
+                    Falar com Atendente
+                </a>
+            </div>
             
-            <!-- Link Kiwify Principal -->
-            <a href="https://pay.kiwify.com.br/BQCjmJu" class="cta-button">Quero Acessar o Manual Agora</a>
-            <div class="price-tag">🔒 Pagamento único de R$ 19,90. Acesso imediato.</div>
-        </div>
-    </section>
-
-    <!-- POR QUE ENTRAR NO HITS? -->
-    <section class="why-section">
-        <div class="container">
-            <h2>Por que você PRECISA dominar o Hits?</h2>
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <h3>🚀 O Segredo do Algoritmo</h3>
-                    <p>O iFood prioriza e dá muito mais visibilidade orgânica para lojas que participam ativamente do Hits. Estar de fora é ficar invisível na hora do pico.</p>
-                </div>
-                <div class="benefit-card">
-                    <h3>💰 Dinheiro do Aplicativo</h3>
-                    <p>O Hits possui o "Subsídio". Isso significa que o iFood injeta dinheiro na sua loja para pagar parte dos descontos e do frete. Se você não usa, rasga dinheiro.</p>
-                </div>
-                <div class="benefit-card">
-                    <h3>🎯 Filtro de Clientes</h3>
-                    <p>A maioria dos usuários filtra o aplicativo por "Promoções" ou "Entrega Grátis". O Hits te coloca automaticamente nas listas que mais convertem vendas.</p>
-                </div>
+            <!-- Substituir por iframe real do Google Maps -->
+            <div class="map-placeholder">
+                [Área reservada para o mapa do Google (iframe)]
             </div>
         </div>
     </section>
 
-    <!-- A SOLUÇÃO (MOCKUP + LISTA) -->
-    <section style="background-color: var(--bg-white);">
-        <div class="container">
-            <h2 style="text-align: center; margin-bottom: 20px; font-size: 2.3rem;">O que você vai aplicar na sua loja hoje:</h2>
-            <p style="text-align: center; color: var(--text-gray); margin-bottom: 50px; max-width: 600px; margin-left: auto; margin-right: auto;">O manual é visual. Mostramos a tela real do iFood para você simplesmente copiar e colar na sua operação.</p>
-            
-            <div class="grid-2">
-                <div style="text-align: center;">
-                    <img src="https://i.ibb.co/N6gvdqPp/3ac20f1d-0ec5-4458-b976-20719fdfeae0.png" alt="Mockup do Manual iFood Hits" class="mockup-img">
-                </div>
-                
-                <div>
-                    <ul class="check-list">
-                        <li><strong>O Hack de 1 Centavo:</strong> Como um ajuste simples de R$ 25,00 para R$ 24,99 te faz economizar reais valiosos por pedido.</li>
-                        <li><strong>O Jogo do Frete:</strong> Como configurar a sua taxa até 3km para o iFood devolver até R$ 10 para o seu caixa.</li>
-                        <li><strong>Regras de Logística:</strong> Estratégias validadas tanto para frota própria quanto para quem usa a entrega parceira.</li>
-                        <li><strong>Proteção de Margem:</strong> Entenda a matemática das faixas de R$ 5, R$ 8 e R$ 10 para não colocar produtos no prejuízo.</li>
-                    </ul>
-                    <!-- Link Kiwify Secundário -->
-                    <a href="https://pay.kiwify.com.br/BQCjmJu" class="cta-button" style="margin-top: 30px; max-width: 100%;">Garantir Meu Acesso (R$ 19,90)</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ - PERGUNTAS FREQUENTES -->
-    <section class="faq-section">
-        <div class="container">
-            <h2 style="text-align: center; margin-bottom: 40px;">Dúvidas Frequentes</h2>
-            <div class="faq-container">
-                <div class="faq-item">
-                    <h4>Isso serve para quem tem Entrega Própria (Motoboy da loja)?</h4>
-                    <p>Com certeza. Inclusive, o manual tem um módulo específico mostrando como configurar a sua aba de áreas de entrega para aproveitar o subsídio de até R$ 10 do iFood, sem precisar zerar a sua taxa.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>E para quem usa a Entrega Parceira (Logística iFood)?</h4>
-                    <p>Sim! Você aprenderá a técnica do "Cupom Travado". Como você não controla a área de entrega, te ensinamos a criar um cupom interno para não estourar o orçamento.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Como vou receber o material?</h4>
-                    <p>Assim que o pagamento de R$ 19,90 for confirmado, você recebe instantaneamente o acesso ao PDF estruturado no e-mail que você cadastrar na compra.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>O iFood não pode mudar essas regras?</h4>
-                    <p>As campanhas específicas mudam de nome, mas a matemática das "faixas de desconto obrigatório" é a base do algoritmo deles há anos. Você vai aprender o princípio, e ele serve para qualquer promoção.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer style="text-align: center; padding: 40px 24px; color: var(--text-gray); font-size: 0.9rem;">
-        <div class="container">
-            <p>&copy; 2026 Rocket For Eat. Todos os direitos reservados.</p>
-        </div>
+    <footer>
+        <p>&copy; 2026 Boa Vida Pilates e Fisioterapia. Todos os direitos reservados.</p>
     </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5511975435555?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio." class="fab-whatsapp" target="_blank" aria-label="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
 
 </body>
 </html>
